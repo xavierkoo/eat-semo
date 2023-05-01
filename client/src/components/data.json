@@ -1,0 +1,56 @@
+[
+    {
+        "name": "25 Degrees",
+        "area": "Central",
+        "price": 1,
+        "cuisine": "Western"
+    },
+    {
+        "name": "46 Mittsu",
+        "area": "South",
+        "price": 2,
+        "cuisine": "Western"
+    },
+    {
+        "name": "49 Seats",
+        "area": "Central",
+        "price": 1,
+        "cuisine": "Western"
+    },
+    {
+        "name": "886 Bistro",
+        "area": "East",
+        "price": 3,
+        "cuisine": "Chinese"
+    },
+    {
+        "name": "888 Mookata",
+        "area": "North, East, Central",
+        "price": 2,
+        "cuisine": "Asian"
+    },
+    {
+        "name": "90 Minutes",
+        "area": "Central",
+        "price": 2,
+        "cuisine": "Korean"
+    },
+    {
+        "name": "A&W",
+        "area": "North-East, East",
+        "price": 3,
+        "cuisine": "Fast-Food"
+    },
+    {
+        "name": "A9 Noodles & Dumplings",
+        "area": "Central",
+        "price": 4,
+        "cuisine": "Chinese"
+    },
+    {
+        "name": "Abundance",
+        "area": "South",
+        "price": 3,
+        "cuisine": "Chinese"
+    }
+]

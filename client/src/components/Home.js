@@ -6,7 +6,7 @@ const Home = () => {
     const [selectedLocation, setSelectedLocation] = useState('');
     const [selectedBudget, setSelectedBudget] = useState('');
     const [selectedCuisine, setSelectedCuisine] = useState('');
-    const [isLeft, setIsLeft] = useState(true);
+    const [isEatBefore, setIsEatBefore] = useState(true);
 
     const handleLocationChange = (event) => {
         setSelectedLocation(event.target.textContent);
@@ -21,21 +21,22 @@ const Home = () => {
     };
 
     const handleLeftClick = () => {
-        setIsLeft(true);
+        setIsEatBefore(true);
     };
     
     const handleRightClick = () => {
-        setIsLeft(false);
+        setIsEatBefore(false);
     };
 
     return (
         <div>
-            <h1 className='my-5 mb-5'>Today want to Eat Semo?!</h1>
-            <div className='mt-5'>
+            <h1 className='my-5 mb-4'>Today want to Eat Semo?!</h1>
+            <div className='mt-4'>
                 <img src={logo} className="App-logo" alt="logo" style={{ height: '200px' }}/>
             </div>
             <div className='mt-5'>
-                <h2 className='mt-4'>Eat Where? <span style={{ color: 'blue' }}>{selectedLocation}</span></h2>
+                <hr/>
+                <h2 className='mt-3'>Eat Where? <span style={{ color: 'blue' }}>{selectedLocation}</span></h2>
                 <Dropdown size="lg">
                     <Dropdown.Toggle 
                         variant="primary" 
@@ -50,10 +51,10 @@ const Home = () => {
                         <Dropdown.Item href="#/action-2" onClick={handleLocationChange}>North-East</Dropdown.Item>
                         <Dropdown.Item href="#/action-2" onClick={handleLocationChange}>South</Dropdown.Item>
                         <Dropdown.Item href="#/action-4" onClick={handleLocationChange}>Central</Dropdown.Item>
-                        <Dropdown.Item href="#/action-4" onClick={handleLocationChange}>Convenient</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <h2 className='mt-4'>Eat How Much? <span style={{ color: 'green' }}>{selectedBudget}</span></h2>
+                <hr/>
+                <h2 className='mt-3'>Eat How Much? <span style={{ color: 'green' }}>{selectedBudget}</span></h2>
                 <Dropdown size="lg">
                     <Dropdown.Toggle 
                         variant="success" 
@@ -69,7 +70,8 @@ const Home = () => {
                         <Dropdown.Item href="#/action-4" onClick={handleBudgetChange}>Grass 🌱🌱</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <h2 className='mt-4'>Eat What? <span style={{ color: 'red' }}>{selectedCuisine}</span></h2>
+                <hr/>
+                <h2 className='mt-3'>Eat What? <span style={{ color: 'red' }}>{selectedCuisine}</span></h2>
                 <Dropdown size="lg">
                     <Dropdown.Toggle 
                         variant="danger" 
@@ -84,14 +86,21 @@ const Home = () => {
                         <Dropdown.Item href="#/action-2" onClick={handleCuisineChange}>Cafe ☕</Dropdown.Item>
                         <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Korean 🇰🇷</Dropdown.Item>
                         <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Chinese 🧧</Dropdown.Item>
+                        <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Asian 👲🐘🇲🇾🇻🇳</Dropdown.Item>
                         <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Fast-Food 🍔</Dropdown.Item>
+                        <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Dessert 🍧</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <h2 className='mt-4'>Eat Before? {isLeft}</h2>
+                <hr/>
+                <h2 className='mt-3'>Eat Before?</h2>
                 <ButtonGroup>
-                    <Button variant={isLeft ? 'success' : 'secondary'} onClick={handleLeftClick}>Yes</Button>
-                    <Button variant={!isLeft ? 'success' : 'secondary'} onClick={handleRightClick}>No</Button>
+                    <Button variant={isEatBefore ? 'success' : 'secondary'} onClick={handleLeftClick}>Yes</Button>
+                    <Button variant={!isEatBefore ? 'danger' : 'secondary'} onClick={handleRightClick}>No</Button>
                 </ButtonGroup>
+                <hr/>
+                <div>
+                    <Button variant="primary" size="lg">Submit</Button>
+                </div>
             </div>
         </div>
     );
