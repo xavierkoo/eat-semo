@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import logo from '../assets/mascot.png';
 import { Dropdown, ButtonGroup, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import data from './data.json';
 
 const Home = () => {
     const [selectedLocation, setSelectedLocation] = useState('');
     const [selectedBudget, setSelectedBudget] = useState('');
     const [selectedCuisine, setSelectedCuisine] = useState('');
     const [isEatBefore, setIsEatBefore] = useState(true);
+    const [filteredData, setFilteredData] = useState([]);
 
     const handleLocationChange = (event) => {
         setSelectedLocation(event.target.textContent);
@@ -26,6 +29,44 @@ const Home = () => {
     
     const handleRightClick = () => {
         setIsEatBefore(false);
+    };
+
+    const navigate = useNavigate();
+
+    const budgetMap = {
+        'Fancy 💸💸': 1,
+        'Gai Gai 💰💰': 2,
+        'Budget ✅✅': 3,
+        'Grass 🌱🌱': 4,
+    };
+
+    const cuisineMap = {
+        "Japanese 🇯🇵": "Japanese",
+        "Western 🍽️": "Western",
+        "Cafe ☕": "Cafe",
+        "Korean 🇰🇷": "Korean",
+        "Chinese 🧧": "Chinese",
+        "Asian 👲🐘🇲🇾🇻🇳": "Asian",
+        "Fast-Food  🍔": "Fast-Food",
+        "Dessert 🍧": "Dessert",
+    };
+      
+
+    const handleSubmit = () => {
+        const filteredData = data.filter((item) => {
+            const budgetValue = budgetMap[selectedBudget];
+            const selectedCuisineValue = cuisineMap[selectedCuisine];
+            console.log(selectedLocation, selectedCuisine, budgetValue, isEatBefore)
+            return (
+                item.area.includes(selectedLocation) &&
+                item.cuisine === selectedCuisineValue &&
+                item.price === budgetValue &&
+                item.isEatBefore === isEatBefore
+            );
+        });
+        console.log(filteredData)
+        setFilteredData(filteredData);
+        navigate(`/result/${encodeURIComponent(JSON.stringify(filteredData))}`);
     };
 
     return (
@@ -94,12 +135,12 @@ const Home = () => {
                 <hr/>
                 <h2 className='mt-3'>Eat Before?</h2>
                 <ButtonGroup>
-                    <Button variant={isEatBefore ? 'success' : 'secondary'} onClick={handleLeftClick}>Yes</Button>
-                    <Button variant={!isEatBefore ? 'danger' : 'secondary'} onClick={handleRightClick}>No</Button>
+                    <Button variant={isEatBefore ? 'success' : 'secondary'} size="md" onClick={handleLeftClick}>Yes</Button>
+                    <Button variant={!isEatBefore ? 'danger' : 'secondary'} size="md" onClick={handleRightClick}>No</Button>
                 </ButtonGroup>
                 <hr/>
                 <div>
-                    <Button variant="primary" size="lg">Submit</Button>
+                    <Button variant="primary" size="lg" className='my-2 mb-4' onClick={handleSubmit}>Submit</Button>
                 </div>
             </div>
         </div>
