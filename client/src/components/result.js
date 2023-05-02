@@ -21,9 +21,8 @@ const Result = () => {
 
     const onCardLeftScreen = (myIdentifier) => {
         console.log(myIdentifier + ' left the screen')
-        // Update the active card index and color index when the card leaves the screen
+        // Update the active card index when the card leaves the screen
         setActiveCardIndex(activeCardIndex + 1);
-        setActiveColorIndex(Math.floor(Math.random() * colors.length));
     }
 
     const itemStyle = {
@@ -88,13 +87,13 @@ const Result = () => {
                     )}
                     </div>
                 ) : (
-                    <TinderCard>
+                    <TinderCard preventSwipe={true}>
                         <div className="d-flex justify-content-center align-items-center">
                             <div style={itemStyle3}>
                                 <h3>No more places left 😔</h3>
                             </div>
                         </div>
-                        </TinderCard>
+                    </TinderCard>
                 )}
             </div>
             <Button className="primary position-fixed bottom-0 end-0 mb-5 me-5" size="lg" onClick={() => navigate('/')}>Choose Again</Button>
