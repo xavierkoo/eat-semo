@@ -37,7 +37,7 @@ const Result = () => {
     return (
         <div>
             <h1>Result</h1>
-            {filteredData.length > 0 ? (
+            {activeCardIndex < filteredData.length ? (
                 <TinderCard key={activeCardIndex} onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen(filteredData[activeCardIndex].name)} preventSwipe={['right', 'left']}>
                     <div className="d-flex justify-content-center align-items-center">
                         <div style={itemStyle}>
