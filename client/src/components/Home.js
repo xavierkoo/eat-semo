@@ -52,6 +52,10 @@ const Home = () => {
     };
       
 
+    /**
+     * The function filters data based on selected location, cuisine, budget, and whether the user has
+     * eaten there before, and then sets and navigates to the result page with the filtered data.
+     */
     const handleSubmit = () => {
         const filteredData = data.filter((item) => {
             const budgetValue = budgetMap[selectedBudget];

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { useParams } from 'react-router-dom';
+import { Button } from "react-bootstrap";
+import { useParams, useNavigate } from 'react-router-dom';
 import TinderCard from 'react-tinder-card'
 
 const Result = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const filteredData = JSON.parse(decodeURIComponent(id));
     const [activeCardIndex, setActiveCardIndex] = useState(0);
@@ -34,20 +36,68 @@ const Result = () => {
         boxSizing: 'border-box',
     };
 
+    const itemStyle2 = {
+        backgroundColor: colors[activeColorIndex + 1],
+        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+        borderRadius: '8px',
+        padding: '16px',
+        marginBottom: '16px',
+        width: '50%',
+        boxSizing: 'border-box',
+    };
+
+    const itemStyle3 = {
+        backgroundColor: '#D3D3D3',
+        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+        borderRadius: '8px',
+        padding: '16px',
+        marginBottom: '16px',
+        width: '50%',
+        boxSizing: 'border-box',
+    };
+
     return (
         <div>
-            <h1>Result</h1>
-            {activeCardIndex < filteredData.length ? (
-                <TinderCard key={activeCardIndex} onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen(filteredData[activeCardIndex].name)} preventSwipe={['right', 'left']}>
-                    <div className="d-flex justify-content-center align-items-center">
-                        <div style={itemStyle}>
-                            <h3>{filteredData[activeCardIndex].name}</h3>
+            <h1 className="mt-5">Eat Semo?!</h1>
+            <div className="my-5">
+                {activeCardIndex < filteredData.length ? (
+                <div>
+                    <TinderCard
+                        key={activeCardIndex}
+                        className="tinder-card"
+                        onSwipe={onSwipe}
+                        onCardLeftScreen={() => onCardLeftScreen(filteredData[activeCardIndex].name)}
+                    >
+                        <div className="d-flex justify-content-center align-items-center">
+                            <div style={itemStyle}>
+                                <h3>{filteredData[activeCardIndex].name}</h3>
+                            </div>
                         </div>
+                    </TinderCard>
+                    {activeCardIndex + 1 < filteredData.length && (
+                        <TinderCard
+                        key={activeCardIndex + 1}
+                        className="tinder-card tinder-card-behind"
+                        >
+                        <div className="d-flex justify-content-center align-items-center">
+                            <div style={itemStyle2}>
+                                <h3>{filteredData[activeCardIndex + 1].name}</h3>
+                            </div>
+                        </div>
+                        </TinderCard>
+                    )}
                     </div>
-                </TinderCard>
-            ) : (
-                <p>No more items to show</p>
-            )}
+                ) : (
+                    <TinderCard>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <div style={itemStyle3}>
+                                <h3>No more places left 😔</h3>
+                            </div>
+                        </div>
+                        </TinderCard>
+                )}
+            </div>
+            <Button className="primary position-fixed bottom-0 end-0 mb-5 me-5" size="lg" onClick={() => navigate('/')}>Choose Again</Button>
         </div>
     );
 };

@@ -40,3 +40,16 @@
     transform: rotate(360deg);
   }
 }
+
+.tinder-card {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+
+.tinder-card-behind {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  transform: translateY(10%);
+}
