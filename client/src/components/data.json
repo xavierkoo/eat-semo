@@ -497,78 +497,78 @@
         "isEatBefore": false
     },
     {
-        "name": "Chops",
+        "name": "Eat 3 Bowls",
         "area": "Central",
+        "price": 3,
+        "cuisine": "Chinese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Eat My Curry Bun",
+        "area": "North-East",
+        "price": 3,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Eggslut",
+        "area": "Central",
+        "price": 3,
+        "cuisine": "Western",
+        "isEatBefore": true
+    },
+    {
+        "name": "Eighteen Chef",
+        "area": "North, South, East, Central",
+        "price": 4,
+        "cuisine": "Western",
+        "isEatBefore": true
+    },
+    {
+        "name": "El Carbon",
+        "area": "North, East, Central",
         "price": 3,
         "cuisine": "Western",
         "isEatBefore": false
     },
     {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
+        "name": "Emosnacks",
+        "area": "North-East",
+        "price": 4,
+        "cuisine": "Chinese",
         "isEatBefore": false
     },
     {
-        "name": "Chops",
+        "name": "En Sushi",
         "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
+        "price": 2,
+        "cuisine": "Japanese",
         "isEatBefore": false
     },
     {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
+        "name": "Encik Tan",
+        "area": "North, South, East, Central",
+        "price": 4,
+        "cuisine": "Asian",
+        "isEatBefore": true
+    },
+    {
+        "name": "Eng's Wanton Noodle",
+        "area": "East",
+        "price": 4,
+        "cuisine": "Chinese",
         "isEatBefore": false
     },
     {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
+        "name": "Eonni Korean BBQ",
+        "area": "East",
+        "price": 2,
+        "cuisine": "Korean",
         "isEatBefore": false
     },
     {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
+        "name": "Equate",
+        "area": "South, Central",
         "price": 3,
         "cuisine": "Western",
         "isEatBefore": false
