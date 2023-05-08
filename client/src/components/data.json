@@ -574,80 +574,80 @@
         "isEatBefore": false
     },
     {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
+        "name": "Etna",
+        "area": "South, East",
+        "price": 1,
         "cuisine": "Western",
         "isEatBefore": false
     },
     {
-        "name": "Chops",
+        "name": "Evan's Kitch",
         "area": "Central",
-        "price": 3,
+        "price": 2,
         "cuisine": "Western",
         "isEatBefore": false
     },
     {
-        "name": "Chops",
-        "area": "Central",
+        "name": "Eventasty",
+        "area": "South, Central",
         "price": 3,
+        "cuisine": "Chinese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Family Mookata",
+        "area": "North",
+        "price": 3,
+        "cuisine": "Asian",
+        "isEatBefore": false
+    },
+    {
+        "name": "Fat Cow",
+        "area": "Central",
+        "price": 1,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Feng Food",
+        "area": "North",
+        "price": 3,
+        "cuisine": "Chinese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Five Guys",
+        "area": "North-East, Central",
+        "price": 3,
+        "cuisine": "Western",
+        "isEatBefore": true
+    },
+    {
+        "name": "Five Oars",
+        "area": "East",
+        "price": 2,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Folk Yard",
+        "area": "North-East",
+        "price": 2,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Fuel X",
+        "area": "North-East",
+        "price": 2,
         "cuisine": "Western",
         "isEatBefore": false
     },
     {
-        "name": "Chops",
+        "name": "Fufu Pot",
         "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
-        "isEatBefore": false
-    },
-    {
-        "name": "Chops",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Western",
+        "price": 2,
+        "cuisine": "Chinese",
         "isEatBefore": false
     },
     {
