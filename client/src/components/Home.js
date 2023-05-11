@@ -36,7 +36,7 @@ const Home = () => {
     const budgetMap = {
         'Fancy 💸💸': 1,
         'Gai Gai 💰💰': 2,
-        'Budget ✅✅': 3,
+        'Affordable ✅✅': 3,
         'Grass 🌱🌱': 4,
     };
 
