@@ -114,7 +114,7 @@ const Home = () => {
                             <Dropdown.Menu>
                                 <Dropdown.Item href="#/action-1" onClick={handleBudgetChange}>Fancy 💸💸</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3" onClick={handleBudgetChange}>Gai Gai 💰💰</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2" onClick={handleBudgetChange}>Budget ✅✅</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2" onClick={handleBudgetChange}>Affordable ✅✅</Dropdown.Item>
                                 <Dropdown.Item href="#/action-4" onClick={handleBudgetChange}>Grass 🌱🌱</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
