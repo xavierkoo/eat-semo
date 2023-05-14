@@ -16,9 +16,9 @@
     {
         "name": "49 Seats",
         "area": "Central",
-        "price": 1,
+        "price": 2,
         "cuisine": "Western",
-        "isEatBefore": false
+        "isEatBefore": true
     },
     {
         "name": "886 Bistro",
@@ -1001,10 +1001,304 @@
         "isEatBefore": false
     },
     {
+        "name": "Tipo Gnocchi",
+        "area": "Central",
+        "price": 2,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
         "name": "Josh's Grill",
         "area": "Central",
         "price": 2,
         "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "Jypsy",
+        "area": "Central",
+        "price": 2,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Kazu Sumiyaki Restaurant",
+        "area": "Central",
+        "price": 2,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Keisuke Gyoza King",
+        "area": "South",
+        "price": 3,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Khao Hom Thai",
+        "area": "North",
+        "price": 3,
+        "cuisine": "Thai",
+        "isEatBefore": false
+    },
+    {
+        "name": "Kim Dae Mun Korean Food",
+        "area": "Central",
+        "price": 3,
+        "cuisine": "Korean",
+        "isEatBefore": false
+    },
+    {
+        "name": "King of Fried Rice",
+        "area": "North, South, East, Central",
+        "price": 3,
+        "cuisine": "Chinese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Kith Cafe",
+        "area": "North, South, East, Central",
+        "price": 2,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Knead to Eat",
+        "area": "East",
+        "price": 3,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Knock Knock Cafe",
+        "area": "East",
+        "price": 3,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Knockhouse Cafe",
+        "area": "Central",
+        "price": 2,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Koh's Grill and Sushi Bar",
+        "area": "Central",
+        "price": 3,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Korio",
+        "area": "South",
+        "price": 3,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Kujaku Yaki Japanese Restaurant",
+        "area": "South",
+        "price": 2,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Kuriya Japanese Market",
+        "area": "North, South, East, Central",
+        "price": 3,
+        "cuisine": "Japanese",
+        "isEatBefore": true
+    },
+    {
+        "name": "La Bottega Enoteca Italian",
+        "area": "East",
+        "price": 2,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "La Mensa Italian Restaurant",
+        "area": "South",
+        "price": 3,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "Lau Pa Sat",
+        "area": "South",
+        "price": 4,
+        "cuisine": "Asian",
+        "isEatBefore": false
+    },
+    {
+        "name": "Lavi Tacos",
+        "area": "South",
+        "price": 2,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "Lazy Lizard",
+        "area": "North, Central",
+        "price": 2,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "Le Shrimp Ramen",
+        "area": "North, South, East, Central",
+        "price": 2,
+        "cuisine": "Chinese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Lee Wee Brothers",
+        "area": "North, South, East,Central",
+        "price": 4,
+        "cuisine": "Asian",
+        "isEatBefore": false
+    },
+    {
+        "name": "Lenu",
+        "area": "North, South, East, Central",
+        "price": 3,
+        "cuisine": "Chinese",
+        "isEatBefore": true
+    },
+    {
+        "name": "Let's Kinn Thai",
+        "area": "South",
+        "price": 3,
+        "cuisine": "Asian",
+        "isEatBefore": false
+    },
+    {
+        "name": "Limoncello Italian",
+        "area": "South",
+        "price": 2,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "Little Caesars Pizza",
+        "area": "East, Central",
+        "price": 4,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "DLLM Lok Lok",
+        "area": "Central",
+        "price": 3,
+        "cuisine": "Asian",
+        "isEatBefore": true
+    },
+    {
+        "name": "Lok Me Up",
+        "area": "North",
+        "price": 3,
+        "cuisine": "Asian",
+        "isEatBefore": false
+    },
+    {
+        "name": "Lola's Cafe",
+        "area": "North-East",
+        "price": 2,
+        "cuisine": "Cafe",
+        "isEatBefore": true
+    },
+    {
+        "name": "Lucca's Trattoria",
+        "area": "South",
+        "price": 1,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "Luke's Lobster",
+        "area": "South, Central",
+        "price": 1,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "Makisan",
+        "area": "North, South, East, Central",
+        "price": 4,
+        "cuisine": "Japanese",
+        "isEatBefore": true
+    },
+    {
+        "name": "Mamma Mia!",
+        "area": "East",
+        "price": 3,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "What The Fish",
+        "area": "East",
+        "price": 4,
+        "cuisine": "Asian",
+        "isEatBefore": true
+    },
+    {
+        "name": "Marcy's",
+        "area": "South",
+        "price": 1,
+        "cuisine": "Western",
+        "isEatBefore": false
+    },
+    {
+        "name": "Maruhachi Donburi & Curry",
+        "area": "North, South, East, Central",
+        "price": 3,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Marutama Ramen",
+        "area": "North, South, East, Central",
+        "price": 2,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Nana's Green Tea",
+        "area": "Central",
+        "price": 2,
+        "cuisine": "Japanese",
+        "isEatBefore": true
+    },
+    {
+        "name": "Maccha House",
+        "area": "East",
+        "price": 2,
+        "cuisine": "Japanese",
+        "isEatBefore": true
+    },
+    {
+        "name": "Matchaya",
+        "area": "Central",
+        "price": 2,
+        "cuisine": "Japanese",
+        "isEatBefore": false
+    },
+    {
+        "name": "Maxi Coffee Bar",
+        "area": "South",
+        "price": 2,
+        "cuisine": "Cafe",
+        "isEatBefore": false
+    },
+    {
+        "name": "Meat My Meat",
+        "area": "Central",
+        "price": 3,
+        "cuisine": "Cafe",
         "isEatBefore": false
     }
 ]
