@@ -68,9 +68,13 @@ const Home = () => {
                 item.isEatBefore === isEatBefore
             );
         });
-        console.log(filteredData)
-        setFilteredData(filteredData);
-        navigate(`/result/${encodeURIComponent(JSON.stringify(filteredData))}`);
+
+        // Randomize the filteredData array
+        const randomizedData = filteredData.sort(() => Math.random() - 0.5);
+
+        console.log(randomizedData)
+        setFilteredData(randomizedData);
+        navigate(`/result/${encodeURIComponent(JSON.stringify(randomizedData))}`);
     };
 
     return (
