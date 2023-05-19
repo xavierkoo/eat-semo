@@ -966,13 +966,6 @@
         "isEatBefore": false
     },
     {
-        "name": "Itchy Bun",
-        "area": "Central",
-        "price": 3,
-        "cuisine": "Japanese",
-        "isEatBefore": false
-    },
-    {
         "name": "89.7 Supper Club",
         "area": "East",
         "price": 4,
@@ -3135,5 +3128,12 @@
         "price": 3,
         "cuisine": "Cafe",
         "isEatBefore": false
+    },
+    {
+        "name": "Poke Theory",
+        "area": "Central, East",
+        "price": 3,
+        "cuisine": "Western",
+        "isEatBefore": true
     }
 ]
