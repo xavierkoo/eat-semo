@@ -10,11 +10,17 @@ const Result = () => {
     const [activeCardIndex, setActiveCardIndex] = useState(0);
     const colors = ['#E6B8B2', '#F2D7D5', '#C7CEEA', '#E8C1A0', '#E0DDCF', '#C8E0E0', '#F1CDB3', '#B5EAD7', '#F9E2D2', '#E0B1CB'];
     const [activeColorIndex, setActiveColorIndex] = useState(Math.floor(Math.random() * colors.length));
+    const [randomImageURL, setRandomImageURL] = useState("");
 
+    const imageCount = 22;
+    const randomizePictures = () => {
+      const randInt = Math.floor(Math.random() * imageCount) + 1;
+      return `${randInt}.png`;
+    };
 
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction)
-         // Update the active card index and color index when the user swipes
+        // Update the active card index and color index when the user swipes
         setActiveCardIndex(activeCardIndex + 1);
         setActiveColorIndex(Math.floor(Math.random() * colors.length));
     }
@@ -68,28 +74,34 @@ const Result = () => {
                         onCardLeftScreen={() => onCardLeftScreen(filteredData[activeCardIndex].name)}
                     >
                         <div className="d-flex justify-content-center align-items-center">
-                            <div style={itemStyle}>
+                            <div className="card-content" style={itemStyle}>
                                 <h3>{filteredData[activeCardIndex].name}</h3>
+                                <div>
+                                    <img src={require(`../assets/food/${randomizePictures()}`)} style={{width: "120px", height:"120px"}} />
+                                </div>
                             </div>
                         </div>
                     </TinderCard>
                     {activeCardIndex + 1 < filteredData.length && (
                         <TinderCard
-                        key={activeCardIndex + 1}
-                        className="tinder-card tinder-card-behind"
+                            key={activeCardIndex + 1}
+                            className="tinder-card tinder-card-behind"
                         >
-                        <div className="d-flex justify-content-center align-items-center">
-                            <div style={itemStyle2}>
-                                <h3>{filteredData[activeCardIndex + 1].name}</h3>
+                            <div className="d-flex justify-content-center align-items-center">
+                                <div className="card-content" style={itemStyle2}>
+                                    <h3>{filteredData[activeCardIndex + 1].name}</h3>
+                                    <div>
+                                        <img src={require(`../assets/food/${randomizePictures()}`)} style={{width: "120px", height:"120px"}} />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                         </TinderCard>
                     )}
                     </div>
                 ) : (
                     <TinderCard preventSwipe={true}>
                         <div className="d-flex justify-content-center align-items-center">
-                            <div style={itemStyle3}>
+                            <div className="card-content" style={itemStyle3}>
                                 <h3>No more places left 😔</h3>
                             </div>
                         </div>

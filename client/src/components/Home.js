@@ -49,6 +49,7 @@ const Home = () => {
         "Asian 👲🐘🇲🇾🇻🇳": "Asian",
         "Fast-Food  🍔": "Fast-Food",
         "Dessert 🍧": "Dessert",
+        "Anything 🤷‍♂️": "Anything",
     };
       
 
@@ -60,18 +61,18 @@ const Home = () => {
         const filteredData = data.filter((item) => {
             const budgetValue = budgetMap[selectedBudget];
             const selectedCuisineValue = cuisineMap[selectedCuisine];
-            console.log(selectedLocation, selectedCuisine, budgetValue, isEatBefore)
+
             return (
                 item.area.includes(selectedLocation) &&
-                item.cuisine === selectedCuisineValue &&
+                (selectedCuisineValue === "Anything" || item.cuisine === selectedCuisineValue) &&
                 item.price === budgetValue &&
                 item.isEatBefore === isEatBefore
             );
         });
-
+    
         // Randomize the filteredData array
         const randomizedData = filteredData.sort(() => Math.random() - 0.5);
-
+    
         console.log(randomizedData)
         setFilteredData(randomizedData);
         navigate(`/result/${encodeURIComponent(JSON.stringify(randomizedData))}`);
@@ -145,6 +146,7 @@ const Home = () => {
                                 <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Asian 👲🐘🇲🇾🇻🇳</Dropdown.Item>
                                 <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Fast-Food 🍔</Dropdown.Item>
                                 <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Dessert 🍧</Dropdown.Item>
+                                <Dropdown.Item href="#/action-4" onClick={handleCuisineChange}>Anything 🤷‍♂️</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
