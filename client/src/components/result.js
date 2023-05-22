@@ -84,6 +84,10 @@ const Result = () => {
                                 <div>
                                     <img src={require(`../assets/food/${randomizePictures()}`)} style={{width: "120px", height:"120px"}} />
                                 </div>
+                                <div className="mt-2">
+                                    <h3><span style={{ color: 'blue' }}>{filteredData[activeCardIndex].area}</span> </h3>
+                                    <h3><span style={{ color: 'green' }}>{filteredData[activeCardIndex].cuisine}</span></h3>
+                                </div>
                             </div>
                         </div>
                     </TinderCard>
@@ -112,12 +116,6 @@ const Result = () => {
                         </div>
                     </TinderCard>
                 )}
-            </div>
-            <div style={{ marginTop: '400px' }}>
-                <h3><span style={{ color: 'blue' }}>Location:</span> {selectedLocation}</h3>
-                <h3><span style={{ color: 'green' }}>Budget:</span> {selectedBudget}</h3>
-                <h3><span style={{ color: 'red' }}>Cuisine:</span> {selectedCuisine}</h3>
-                <h3><span style={{ color: 'purple' }}>Have you eaten here before?</span> {isEatBefore ? "Yes" : "No"}</h3>
             </div>
             <GoogleSearchButton searchQuery={filteredData[activeCardIndex].name} />
             <Button className="primary position-fixed bottom-0 end-0 mb-5 me-5" size="lg" onClick={() => navigate('/')}>Choose Again</Button>
