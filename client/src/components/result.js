@@ -7,7 +7,12 @@ import GoogleSearchButton from "./GoogleSearchButton";
 const Result = () => {
     const navigate = useNavigate();
     const { id } = useParams();
-    const filteredData = JSON.parse(decodeURIComponent(id));
+    const Data = JSON.parse(decodeURIComponent(id));
+    const filteredData = Data.data;
+    const selectedLocation = Data.selectedLocation;
+    const selectedBudget = Data.selectedBudget;
+    const selectedCuisine = Data.selectedCuisine;
+    const isEatBefore = Data.isEatBefore;
     const [activeCardIndex, setActiveCardIndex] = useState(0);
     const colors = ['#E6B8B2', '#F2D7D5', '#C7CEEA', '#E8C1A0', '#E0DDCF', '#C8E0E0', '#F1CDB3', '#B5EAD7', '#F9E2D2', '#E0B1CB'];
     const [activeColorIndex, setActiveColorIndex] = useState(0);
@@ -79,7 +84,6 @@ const Result = () => {
                                 <div>
                                     <img src={require(`../assets/food/${randomizePictures()}`)} style={{width: "120px", height:"120px"}} />
                                 </div>
-                                <GoogleSearchButton searchQuery={filteredData[activeCardIndex].name} />
                             </div>
                         </div>
                     </TinderCard>
@@ -109,6 +113,13 @@ const Result = () => {
                     </TinderCard>
                 )}
             </div>
+            <div style={{ marginTop: '400px' }}>
+                <h3><span style={{ color: 'blue' }}>Location:</span> {selectedLocation}</h3>
+                <h3><span style={{ color: 'green' }}>Budget:</span> {selectedBudget}</h3>
+                <h3><span style={{ color: 'red' }}>Cuisine:</span> {selectedCuisine}</h3>
+                <h3><span style={{ color: 'purple' }}>Have you eaten here before?</span> {isEatBefore ? "Yes" : "No"}</h3>
+            </div>
+            <GoogleSearchButton searchQuery={filteredData[activeCardIndex].name} />
             <Button className="primary position-fixed bottom-0 end-0 mb-5 me-5" size="lg" onClick={() => navigate('/')}>Choose Again</Button>
         </div>
     );

@@ -72,10 +72,16 @@ const Home = () => {
     
         // Randomize the filteredData array
         const randomizedData = filteredData.sort(() => Math.random() - 0.5);
+        const finalData = {
+            data: randomizedData,
+            selectedLocation,
+            selectedBudget,
+            selectedCuisine,
+            isEatBefore,
+        }
     
-        console.log(randomizedData)
-        setFilteredData(randomizedData);
-        navigate(`/result/${encodeURIComponent(JSON.stringify(randomizedData))}`);
+        setFilteredData(finalData);
+        navigate(`/result/${encodeURIComponent(JSON.stringify(finalData))}`);
     };
 
     return (

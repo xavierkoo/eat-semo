@@ -9,7 +9,9 @@ const GoogleSearchButton = ({ searchQuery }) => {
     };
 
     return (
-        <Button className="btn btn-success mt-4" onClick={handleSearch}>Search</Button>
+        <Button className="btn btn-success position-fixed bottom-0 start-0 mb-5 ms-5" size="lg" onClick={handleSearch}>
+            Search Google
+        </Button>
     );
 };
 
