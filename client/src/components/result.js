@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useParams, useNavigate } from 'react-router-dom';
-import TinderCard from 'react-tinder-card'
+import TinderCard from 'react-tinder-card';
+import GoogleSearchButton from "./GoogleSearchButton";
 
 const Result = () => {
     const navigate = useNavigate();
@@ -9,8 +10,7 @@ const Result = () => {
     const filteredData = JSON.parse(decodeURIComponent(id));
     const [activeCardIndex, setActiveCardIndex] = useState(0);
     const colors = ['#E6B8B2', '#F2D7D5', '#C7CEEA', '#E8C1A0', '#E0DDCF', '#C8E0E0', '#F1CDB3', '#B5EAD7', '#F9E2D2', '#E0B1CB'];
-    const [activeColorIndex, setActiveColorIndex] = useState(Math.floor(Math.random() * colors.length));
-    const [randomImageURL, setRandomImageURL] = useState("");
+    const [activeColorIndex, setActiveColorIndex] = useState(0);
 
     const imageCount = 22;
     const randomizePictures = () => {
@@ -22,7 +22,7 @@ const Result = () => {
         console.log('You swiped: ' + direction)
         // Update the active card index and color index when the user swipes
         setActiveCardIndex(activeCardIndex + 1);
-        setActiveColorIndex(Math.floor(Math.random() * colors.length));
+        setActiveColorIndex(activeCardIndex);
     }
 
     const onCardLeftScreen = (myIdentifier) => {
@@ -79,6 +79,7 @@ const Result = () => {
                                 <div>
                                     <img src={require(`../assets/food/${randomizePictures()}`)} style={{width: "120px", height:"120px"}} />
                                 </div>
+                                <GoogleSearchButton searchQuery={filteredData[activeCardIndex].name} />
                             </div>
                         </div>
                     </TinderCard>

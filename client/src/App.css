@@ -45,7 +45,6 @@
   position: absolute;
   z-index: 2;
   width: 99%;
-  height: 100%;
 }
 
 .tinder-card-behind {
@@ -56,5 +55,5 @@
 }
 
 .card-content {
-  height: 500px; /* Change the height to your desired value */
+  height: 400px; /* Change the height to your desired value */
 }
