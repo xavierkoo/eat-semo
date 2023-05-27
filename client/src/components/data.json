@@ -3067,7 +3067,7 @@
         "isEatBefore": false
     },
     {
-        "name": "Tow Bake Boys",
+        "name": "Two Bake Boys",
         "area": "Central",
         "price": 3,
         "cuisine": "Cafe",
@@ -3118,7 +3118,7 @@
     {
         "name": "Pomme",
         "area": "Central",
-        "price": 3,
+        "price": 2,
         "cuisine": "Cafe",
         "isEatBefore": false
     },
